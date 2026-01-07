@@ -63,11 +63,34 @@
       text-decoration: underline;
     }
 
-    footer {
+    /* Footer (branded) */
+    .site-footer {
       text-align: center;
       color: #666;
       font-size: 14px;
-      margin: 40px 0;
+      margin: 48px 0 32px;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .footer-logo {
+      width: 24px;
+      height: 24px;
+      opacity: 0.85;
+    }
+
+    .footer-name {
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+
+    .footer-meta {
+      font-size: 13px;
     }
   </style>
 </head>
@@ -78,7 +101,7 @@
   <h1>Blorp Tech LLC</h1>
 
   <p style="font-size:15px; margin:4px 0; color:#444;">
-    <strong>B.L.O.R.P. — Bridging Local Observations & Response Platform</strong>
+    <strong>B.L.O.R.P. = Bridging Local Observations & Response Platform</strong>
   </p>
 
   <p style="font-size:20px; margin:8px 0;">
@@ -87,7 +110,7 @@
 
   <p>
     Simple, reliable software for community safety, emergency response,
-    and disaster coordination — designed for real-world conditions.
+    and disaster coordination, designed for real-world conditions.
   </p>
 </header>
 
@@ -96,17 +119,17 @@
   <h2>About Blorp Tech</h2>
   <p>
     Blorp Tech LLC is a U.S.-based software company focused on strengthening
-    community resilience and emergency response through clarity-first design.
+    community resilience and emergency response through simplicity-first design.
   </p>
 
   <p>
-    Our work is guided by the <strong>B.L.O.R.P. framework — Bridging Local Observations & Response Platform</strong>.
+    Our work is guided by the <strong>B.L.O.R.P. framework - Bridging Local Observations & Response Platform</strong>.
     During emergencies, the people closest to the problem often have the most valuable information,
     yet that information rarely reaches responders in a usable form.
   </p>
 
   <p>
-    We build systems that bridge that gap — translating local, community-reported
+    We build systems that bridge that gap, translating local, community-reported
     observations into clear, actionable awareness for emergency operations,
     without burdening users with complexity or requiring ideal conditions.
   </p>
@@ -123,21 +146,21 @@
 
   <h3>Radical Simplicity</h3>
   <p>
-    Simplicity is not an aesthetic choice — it is an operational requirement.
-    In emergencies, every unnecessary option, screen, or setting creates friction.
+    Simplicity is not an aesthetic choice, it is an operational requirement.
+    In emergencies, every unnecessary button, screen, or setting creates friction.
     We intentionally limit scope to what matters most so tools remain usable under stress.
   </p>
 
   <h3>Real-World Reliability</h3>
   <p>
-    We design for degraded conditions by default. Our systems are built to function
+    We build for reality and design for degraded conditions by default. Our systems are built to function
     in low-bandwidth, low-power, and high-stress environments.
     Features that cannot be relied upon in real-world conditions are intentionally excluded.
   </p>
 
   <h3>Human-Centered Design</h3>
   <p>
-    We design for people, not systems — for civilians under stress,
+    We design for people, not systems. For civilians under stress,
     responders making rapid decisions, and volunteers coordinating with limited information.
     Our goal is technology that supports human judgment rather than competing with it.
   </p>
@@ -146,12 +169,12 @@
   <p>
     When everything goes wrong at once, clarity becomes a lifeline.
     Our products transform fragmented information into simple,
-    real-time understanding — the right data, in the right form, at the right moment.
+    real-time understanding. The right data, in the right form, at the right moment.
   </p>
 
   <h2>Disaster Help</h2>
   <p>
-    <strong>Disaster Help</strong> is Blorp Tech’s flagship product — a lightweight,
+    <strong>Disaster Help</strong> is Blorp Tech’s flagship product. A lightweight,
     real-time coordination app that enables communities to share critical information
     during disasters while providing responders with structured situational awareness.
   </p>
@@ -197,8 +220,19 @@
 
 </main>
 
-<footer>
-  © <span id="year"></span> Blorp Tech LLC — All Rights Reserved
+<footer class="site-footer">
+  <div class="footer-brand">
+    <img
+      src="/blorp-icon-black.jpg"
+      alt="Blorp Tech"
+      class="footer-logo"
+    />
+    <span class="footer-name">Blorp Tech LLC</span>
+  </div>
+
+  <div class="footer-meta">
+    © <span id="year"></span> Blorp Tech LLC — All Rights Reserved
+  </div>
 </footer>
 
 <script>
