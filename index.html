@@ -79,9 +79,14 @@
 
     .card {
       border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 18px;
+      border-radius: 14px;
+      padding: 20px;
       background: #fafafa;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .card h3 {
+      margin: 8px 0 10px;
     }
 
     .card p {
@@ -89,13 +94,14 @@
     }
 
     .chip {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       font-size: 12px;
-      padding: 4px 10px;
+      padding: 3px 10px;
       border-radius: 999px;
-      background: #e9eefb;
+      background: #eef2ff;
       color: #1f3b8a;
-      border: 1px solid #d9e2ff;
+      border: 1px solid #dbe4ff;
       margin-bottom: 8px;
     }
 
@@ -166,9 +172,8 @@
   </p>
 
   <p>
-    We build systems that bridge that gap, translating local, on-the-ground
-    observations into clear, actionable operational awareness,
-    without burdening users with complexity or requiring ideal conditions.
+    We build systems that bridge that gap, translating local, on-the-ground observations into clear,
+    actionable operational awareness, without burdening users with complexity or requiring ideal conditions.
   </p>
 
   <h2>What We Build</h2>
@@ -180,15 +185,18 @@
     <div class="card">
       <span class="chip">Flagship Product</span>
       <h3 style="margin-top: 0;">Disaster Help</h3>
+
       <p>
         A lightweight, real-time coordination app that enables communities to share critical information
         during disasters while providing responders with structured situational awareness.
       </p>
+
       <p class="muted">
         Civilians can request help, report hazards, and offer assistance through simple, location-based inputs.
         On the responder side, Disaster Help bridges community reporting with emergency operations systems,
         including compatibility with TAK environments.
       </p>
+
       <p>
         <a href="https://youtube.com/shorts/l1ABxu-5TpQ?si=FFPUaOf4z54eLKtw" target="_blank" rel="noopener">
           ▶ Watch the 2-minute Disaster Help demo
@@ -199,18 +207,17 @@
     <div class="card">
       <span class="chip">New Capability</span>
       <h3 style="margin-top: 0;">LIT (Logistics Interior Tool)</h3>
+
       <p>
-        <strong>Rapid interior mapping and space availability reporting for non-standard facilities.</strong>
+        <strong>LIT</strong> provides rapid interior mapping and space availability reporting for repurposed facilities
+        (surge medical, shelters, temporary operations) when reliable floor plans don’t exist.
       </p>
+
       <p class="muted">
-        Designed for situations where buildings are repurposed quickly—such as surge medical sites,
-        shelters, or temporary operations—when accurate floor plans don’t exist or aren’t available.
+        Sketch a simple interior layout in minutes, mark spaces as open / constrained / unavailable,
+        and see real-time availability at a glance.
       </p>
-      <ul>
-        <li>Sketch a simple interior layout in minutes</li>
-        <li>Mark which spaces are open, constrained, or unavailable</li>
-        <li>See real-time availability at a glance</li>
-      </ul>
+
       <p class="muted">
         LIT is not a CAD tool. It’s built for fast operational awareness under pressure.
       </p>
