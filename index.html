@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Blorp Tech</title>
 
-  <meta name="description" content="Blorp Tech builds simple, reliable software for disaster response and community coordination. Makers of Disaster Help.">
+  <meta name="description" content="Blorp Tech builds simple, reliable software for disaster response and operational awareness. Makers of Disaster Help and LIT (Logistics Interior Tool).">
 
   <style>
     body {
@@ -63,6 +63,47 @@
       text-decoration: underline;
     }
 
+    /* Products */
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 12px;
+    }
+
+    @media (min-width: 720px) {
+      .product-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .card {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 18px;
+      background: #fafafa;
+    }
+
+    .card p {
+      margin: 10px 0;
+    }
+
+    .chip {
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e9eefb;
+      color: #1f3b8a;
+      border: 1px solid #d9e2ff;
+      margin-bottom: 8px;
+    }
+
+    .muted {
+      color: #555;
+      font-size: 15px;
+    }
+
     /* Footer (branded) */
     .site-footer {
       text-align: center;
@@ -79,10 +120,10 @@
     }
 
     .footer-logo {
-  width: 24px;
-  height: auto;
-  opacity: 0.85;
-}
+      width: 24px;
+      height: auto;
+      opacity: 0.85;
+    }
 
     .footer-name {
       font-weight: 500;
@@ -125,10 +166,56 @@
   </p>
 
   <p>
-    We build systems that bridge that gap, translating local, community-reported
-    observations into clear, actionable awareness for emergency operations,
+    We build systems that bridge that gap, translating local, on-the-ground
+    observations into clear, actionable operational awareness,
     without burdening users with complexity or requiring ideal conditions.
   </p>
+
+  <h2>What We Build</h2>
+  <p class="muted">
+    We build lightweight, operational tools that work when traditional systems fall short.
+  </p>
+
+  <div class="product-grid">
+    <div class="card">
+      <span class="chip">Flagship Product</span>
+      <h3 style="margin-top: 0;">Disaster Help</h3>
+      <p>
+        A lightweight, real-time coordination app that enables communities to share critical information
+        during disasters while providing responders with structured situational awareness.
+      </p>
+      <p class="muted">
+        Civilians can request help, report hazards, and offer assistance through simple, location-based inputs.
+        On the responder side, Disaster Help bridges community reporting with emergency operations systems,
+        including compatibility with TAK environments.
+      </p>
+      <p>
+        <a href="https://youtube.com/shorts/l1ABxu-5TpQ?si=FFPUaOf4z54eLKtw" target="_blank" rel="noopener">
+          ▶ Watch the 2-minute Disaster Help demo
+        </a>
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="chip">New Capability</span>
+      <h3 style="margin-top: 0;">LIT (Logistics Interior Tool)</h3>
+      <p>
+        <strong>Rapid interior mapping and space availability reporting for non-standard facilities.</strong>
+      </p>
+      <p class="muted">
+        Designed for situations where buildings are repurposed quickly—such as surge medical sites,
+        shelters, or temporary operations—when accurate floor plans don’t exist or aren’t available.
+      </p>
+      <ul>
+        <li>Sketch a simple interior layout in minutes</li>
+        <li>Mark which spaces are open, constrained, or unavailable</li>
+        <li>See real-time availability at a glance</li>
+      </ul>
+      <p class="muted">
+        LIT is not a CAD tool. It’s built for fast operational awareness under pressure.
+      </p>
+    </div>
+  </div>
 
   <h2>Who We Build For</h2>
   <ul>
@@ -168,30 +255,10 @@
     real-time understanding. The right data, in the right form, at the right moment.
   </p>
 
-  <h2>Disaster Help</h2>
-  <p>
-    <strong>Disaster Help</strong> is Blorp Tech’s flagship product. A lightweight,
-    real-time coordination app that enables communities to share critical information
-    during disasters while providing responders with structured situational awareness.
-  </p>
-
-  <p>
-    Users can request help, report hazards, and offer assistance through
-    simple, location-based inputs designed for use under stress.
-    On the responder side, Disaster Help bridges civilian reporting
-    with emergency operations systems, including compatibility with TAK environments.
-  </p>
-
-  <p>
-    <a href="https://youtube.com/shorts/l1ABxu-5TpQ?si=FFPUaOf4z54eLKtw" target="_blank" rel="noopener">
-      ▶ Watch the 2-minute Disaster Help demo
-    </a>
-  </p>
-
   <h2>Pilots & Demos</h2>
   <p>
     We offer pilots and demonstrations for agencies, organizations,
-    and communities interested in evaluating Disaster Help for real-world use.
+    and communities interested in evaluating Blorp Tech tools for real-world use.
   </p>
 
   <p>
