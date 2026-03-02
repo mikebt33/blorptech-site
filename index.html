@@ -1,402 +1,289 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Blorp Tech</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blorp Tech</title>
 
-  <meta name="description" content="Blorp Tech builds simplicity-first software for real-world operations — including Jobsite Live (construction safety & coordination) and in-development tools for disaster response and surge logistics.">
+<meta name="description" content="Blorp Tech builds simplicity-first operational software. Makers of Jobsite Live (construction coordination), Disaster Help, and LIT.">
 
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-      color: #111;
-      background: #f5f5f5;
-    }
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  color: #111;
+  background: #f5f5f5;
+}
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: #f0f0f0;
-    }
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f0f0f0;
+}
 
-    h1 {
-      font-size: 32px;
-      margin: 0 0 8px;
-    }
+h1 { font-size: 32px; margin: 0 0 8px; }
+h2 { margin-top: 48px; font-size: 22px; }
+h3 { margin-top: 28px; font-size: 19px; }
 
-    h2 {
-      margin-top: 48px;
-      font-size: 22px;
-    }
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 36px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
 
-    h3 {
-      margin-top: 28px;
-      font-size: 19px;
-    }
+p, li { font-size: 17px; }
 
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 36px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
+a { color: #0366d6; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-    p, li {
-      font-size: 17px;
-    }
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 18px;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+@media (min-width: 820px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
-    a {
-      color: #0366d6;
-      text-decoration: none;
-    }
+.card {
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 24px;
+  background: #fafafa;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+.chip {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
 
-    /* Products */
-    .product-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-      margin-top: 12px;
-    }
+.chip-live {
+  background: #ecfdf3;
+  color: #065f46;
+  border: 1px solid #bfe7cf;
+}
 
-    @media (min-width: 720px) {
-      .product-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
+.chip-dev {
+  background: #fff7ed;
+  color: #7c2d12;
+  border: 1px solid #fed7aa;
+}
 
-    .card {
-      border: 1px solid #eee;
-      border-radius: 14px;
-      padding: 20px;
-      background: #fafafa;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
-    }
+.btn-row {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
 
-    .card h3 {
-      margin: 8px 0 10px;
-    }
+.btn {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid #111;
+  text-decoration: none;
+}
 
-    .card p {
-      margin: 10px 0;
-    }
+.btn-primary {
+  background: #111;
+  color: #fff;
+}
 
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      font-size: 12px;
-      padding: 3px 10px;
-      border-radius: 999px;
-      background: #eef2ff;
-      color: #1f3b8a;
-      border: 1px solid #dbe4ff;
-      margin-bottom: 8px;
-    }
+.btn-secondary {
+  background: #fff;
+  color: #111;
+}
 
-    .chip-live {
-      background: #ecfdf3;
-      color: #0f5132;
-      border: 1px solid #bfe7cf;
-    }
+.qr-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 28px;
+  text-align: center;
+}
 
-    .chip-dev {
-      background: #fff7ed;
-      color: #7c2d12;
-      border: 1px solid #fed7aa;
-    }
+@media (min-width: 700px) {
+  .qr-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
-    .muted {
-      color: #555;
-      font-size: 15px;
-    }
+.qr-grid img {
+  max-width: 220px;
+  border-radius: 12px;
+}
 
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 14px;
-    }
+.muted {
+  color: #555;
+  font-size: 15px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 10px 14px;
-      border-radius: 10px;
-      border: 1px solid #d0d7de;
-      background: #fff;
-      color: #111;
-      font-weight: 600;
-      font-size: 14px;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      text-decoration: none;
-      border-color: #b6bec7;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.06);
-    }
-
-    .btn-primary {
-      background: #111;
-      color: #fff;
-      border-color: #111;
-    }
-
-    .btn-primary:hover {
-      border-color: #000;
-    }
-
-    .divider {
-      height: 1px;
-      background: #eee;
-      margin: 36px 0;
-    }
-
-    /* Footer (branded) */
-    .site-footer {
-      text-align: center;
-      color: #666;
-      font-size: 14px;
-      margin: 48px 0 32px;
-    }
-
-    .footer-brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .footer-logo {
-      width: 24px;
-      height: auto;
-      opacity: 0.85;
-    }
-
-    .footer-name {
-      font-weight: 500;
-      letter-spacing: 0.2px;
-    }
-
-    .footer-meta {
-      font-size: 13px;
-    }
-  </style>
+.site-footer {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin: 48px 0 32px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>Blorp Tech</h1>
-
   <p style="font-size:20px; margin:8px 0;">
     <strong>Making complexity simple.</strong>
   </p>
-
   <p>
-    Reliable software for real-world operations — jobsite coordination,
-    safety, and emergency response — designed to work under pressure.
+    Reliable operational software for construction, emergency response,
+    and real-world coordination under pressure.
   </p>
 </header>
 
 <main>
 
-  <h2>About Blorp Tech</h2>
-  <p>
-    Blorp Tech is a U.S.-based software company building simplicity-first tools for field environments —
-    where time is limited, conditions are imperfect, and clarity matters.
-  </p>
+<h2>About Blorp Tech</h2>
+<p>
+Blorp Tech builds simplicity-first tools for field environments —
+where clarity, speed, and reliability matter more than feature overload.
+</p>
 
-  <p>
-    Our work is guided by the <strong>B.L.O.R.P. framework — Bridging Local Observations & Response Platform</strong>.
-    Whether it’s a construction site or a disaster response environment, the people closest to the problem
-    often have the most valuable information — yet that information rarely reaches everyone who needs it in a usable form.
-  </p>
+<p>
+Guided by the <strong>B.L.O.R.P. framework — Bridging Local Observations & Response Platform</strong>,
+our mission is to transform on-the-ground observations into clear,
+actionable operational awareness.
+</p>
 
-  <p>
-    We build systems that bridge that gap, translating on-the-ground observations into clear, actionable operational awareness,
-    without burdening users with complexity or requiring ideal conditions.
-  </p>
+<h2>What We Build</h2>
 
-  <h2>What We Build</h2>
-  <p class="muted">
-    Lightweight, operational tools designed for real-world conditions.
-  </p>
+<div class="product-grid">
 
-  <div class="product-grid">
+<!-- JOBSITE LIVE -->
+<div class="card">
+<span class="chip chip-live">Live Platform</span>
+<h3>Jobsite Live</h3>
 
-    <!-- JOBSITE LIVE (LIVE) -->
-    <div class="card">
-      <span class="chip chip-live">Live Platform</span>
-      <h3 style="margin-top: 0;">Jobsite Live</h3>
+<p>
+A real-time safety and coordination platform for active construction jobsites.
+Designed for immediate adoption with minimal training.
+</p>
 
-      <p>
-        A real-time safety and coordination platform built for active construction jobsites.
-        Designed for fast adoption with minimal training.
-      </p>
+<ul class="muted">
+<li>Site-wide updates and communication</li>
+<li>Geofence-based onsite awareness</li>
+<li>Location-based hazard reporting</li>
+<li>Operational clarity for leadership and crews</li>
+</ul>
 
-      <ul class="muted" style="margin: 10px 0 0; padding-left: 20px;">
-        <li>Jobsite-wide communications and updates</li>
-        <li>Geofence-based onsite/offsite awareness</li>
-        <li>Hazard reporting tied to location</li>
-        <li>Operational clarity for site leadership and crews</li>
-      </ul>
+<div class="btn-row">
+<a class="btn btn-primary"
+href="https://apps.apple.com/us/app/jobsite-live/id6759117669"
+target="_blank" rel="noopener">
+Download on iOS App Store
+</a>
 
-      <div class="cta-row">
-        <a class="btn btn-primary" href="mailto:info@blorptech.com?subject=Jobsite%20Live%20Demo%20Request" rel="noopener">
-          Request a Jobsite Live demo
-        </a>
-        <a class="btn" href="mailto:info@blorptech.com?subject=Jobsite%20Live%20Pilot%20Inquiry" rel="noopener">
-          Ask about a pilot
-        </a>
-      </div>
+<a class="btn btn-secondary"
+href="mailto:info@blorptech.com?subject=Jobsite%20Live%20Demo%20Request">
+Request a Demo
+</a>
+</div>
 
-      <p class="muted" style="margin-top: 12px;">
-        <strong>Note:</strong> If you want, we can add App Store / TestFlight links here once you confirm the exact URLs you want public.
-      </p>
-    </div>
+<div class="qr-grid">
 
-    <!-- DISASTER HELP (IN DEV) -->
-    <div class="card">
-      <span class="chip chip-dev">In Development</span>
-      <h3 style="margin-top: 0;">Disaster Help</h3>
+<div>
+<p><strong>Scan for iOS</strong></p>
+<img src="/ios-qr.png" alt="iOS Download QR">
+</div>
 
-      <p>
-        A lightweight, real-time coordination app that enables communities to share critical information
-        during disasters while providing responders with structured situational awareness.
-      </p>
+<div>
+<p><strong>Scan for Android</strong></p>
+<img src="/android-qr.png" alt="Android Download QR">
+</div>
 
-      <p class="muted">
-        Civilians can request help, report hazards, and offer assistance through simple, location-based inputs.
-        On the responder side, Disaster Help bridges community reporting with emergency operations systems,
-        including compatibility with TAK environments.
-      </p>
+</div>
 
-      <p>
-        <a href="https://youtube.com/shorts/l1ABxu-5TpQ?si=FFPUaOf4z54eLKtw" target="_blank" rel="noopener">
-          ▶ Watch the 2-minute Disaster Help demo
-        </a>
-      </p>
-    </div>
+<p class="muted" style="margin-top:18px;">
+Android is currently distributed for pilot environments.
+Contact us if your organization requires deployment assistance.
+</p>
 
-    <!-- LIT (IN DEV) -->
-    <div class="card">
-      <span class="chip chip-dev">In Development</span>
-      <h3 style="margin-top: 0;">LIT (Logistics Interior Tool)</h3>
+</div>
 
-      <p>
-        <strong>LIT</strong> provides rapid interior mapping and space availability reporting for repurposed facilities
-        (surge medical, shelters, temporary operations) when reliable floor plans don’t exist.
-      </p>
+<!-- DISASTER HELP -->
+<div class="card">
+<span class="chip chip-dev">In Development</span>
+<h3>Disaster Help</h3>
 
-      <p class="muted">
-        Sketch a simple interior layout in minutes, mark spaces as open / constrained / unavailable,
-        and see real-time availability at a glance.
-      </p>
+<p>
+A lightweight, real-time coordination platform enabling communities
+to share critical information during disasters while supporting responder awareness.
+</p>
 
-      <p class="muted">
-        LIT is not a CAD tool. It’s built for fast operational awareness under pressure.
-      </p>
-    </div>
+<p class="muted">
+Designed to bridge civilian reporting with structured operational systems,
+including TAK-compatible environments.
+</p>
+</div>
 
-  </div>
+<!-- LIT -->
+<div class="card">
+<span class="chip chip-dev">In Development</span>
+<h3>LIT (Logistics Interior Tool)</h3>
 
-  <div class="divider"></div>
+<p>
+Rapid interior mapping and space availability reporting
+for surge medical facilities, shelters, and temporary operations.
+</p>
 
-  <h2>Who We Build For</h2>
-  <ul>
-    <li>Construction leadership teams, site supers, foremen, and crews</li>
-    <li>Local and rural emergency managers</li>
-    <li>First responders and volunteer organizations</li>
-    <li>Communities affected by disasters with limited connectivity</li>
-    <li>Agencies seeking lightweight tools that complement existing systems</li>
-  </ul>
+<p class="muted">
+Built for fast operational awareness — not CAD precision.
+</p>
+</div>
 
-  <h2>Our Approach</h2>
+</div>
 
-  <h3>Radical Simplicity</h3>
-  <p>
-    Simplicity is not an aesthetic choice — it is an operational requirement.
-    In the field, every unnecessary button, screen, or setting creates friction.
-    We intentionally limit scope to what matters most so tools remain usable under stress.
-  </p>
+<h2>Who We Build For</h2>
+<ul>
+<li>Construction leadership and jobsite crews</li>
+<li>Emergency managers and first responders</li>
+<li>Organizations operating in degraded conditions</li>
+<li>Communities requiring simple coordination tools</li>
+</ul>
 
-  <h3>Real-World Reliability</h3>
-  <p>
-    We design for degraded conditions by default. Our systems are built to function
-    in low-bandwidth, low-power, and high-stress environments.
-    Features that cannot be relied upon in real-world conditions are intentionally excluded.
-  </p>
+<h2>Pilots & Demos</h2>
+<p>
+We offer pilot deployments and demonstrations for organizations evaluating Blorp Tech tools.
+</p>
 
-  <h3>Human-Centered Design</h3>
-  <p>
-    We design for people, not systems — crews working in motion, civilians under stress,
-    responders making rapid decisions, and volunteers coordinating with limited information.
-    Our goal is technology that supports human judgment rather than competing with it.
-  </p>
+<p>
+<strong>Email:</strong>
+<a href="mailto:info@blorptech.com">info@blorptech.com</a>
+</p>
 
-  <h3>Operational Clarity</h3>
-  <p>
-    When everything goes wrong at once, clarity becomes a lifeline.
-    Our products transform fragmented information into simple, real-time understanding —
-    the right data, in the right form, at the right moment.
-  </p>
-
-  <h2>Pilots & Demos</h2>
-  <p>
-    We offer pilots and demonstrations for organizations interested in evaluating Blorp Tech tools for real-world use.
-  </p>
-
-  <p>
-    <strong>Request a pilot or demo:</strong><br>
-    <a href="mailto:info@blorptech.com">info@blorptech.com</a>
-  </p>
-
-  <h2>Contact</h2>
-  <p>
-    Email: <a href="mailto:info@blorptech.com">info@blorptech.com</a><br>
-    Address:<br>
-    Blorp Tech LLC<br>
-    1621 Central Ave<br>
-    Cheyenne, WY 82001-4531<br>
-    United States
-  </p>
-
-  <h2>Legal</h2>
-  <p>
-    <a href="/privacy.html">Privacy Policy</a>
-  </p>
+<h2>Legal</h2>
+<p>
+<a href="/privacy.html">Privacy Policy</a>
+</p>
 
 </main>
 
 <footer class="site-footer">
-  <div class="footer-brand">
-    <img
-      src="/new-blorp-icon-black.jpg"
-      alt="Blorp Tech"
-      class="footer-logo"
-    />
-    <span class="footer-name">Blorp Tech</span>
-  </div>
-
-  <div class="footer-meta">
-    © <span id="year"></span> Blorp Tech — All Rights Reserved
-  </div>
+© <span id="year"></span> Blorp Tech — All Rights Reserved
 </footer>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 </body>
