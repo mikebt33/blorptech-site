@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Blorp Tech</title>
 
-  <meta name="description" content="Blorp Tech builds simple, reliable software for disaster response and operational awareness. Makers of Disaster Help and LIT (Logistics Interior Tool).">
+  <meta name="description" content="Blorp Tech builds simplicity-first software for real-world operations — including Jobsite Live (construction safety & coordination) and in-development tools for disaster response and surge logistics.">
 
   <style>
     body {
@@ -105,9 +105,62 @@
       margin-bottom: 8px;
     }
 
+    .chip-live {
+      background: #ecfdf3;
+      color: #0f5132;
+      border: 1px solid #bfe7cf;
+    }
+
+    .chip-dev {
+      background: #fff7ed;
+      color: #7c2d12;
+      border: 1px solid #fed7aa;
+    }
+
     .muted {
       color: #555;
       font-size: 15px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid #d0d7de;
+      background: #fff;
+      color: #111;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      text-decoration: none;
+      border-color: #b6bec7;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    }
+
+    .btn-primary {
+      background: #111;
+      color: #fff;
+      border-color: #111;
+    }
+
+    .btn-primary:hover {
+      border-color: #000;
+    }
+
+    .divider {
+      height: 1px;
+      background: #eee;
+      margin: 36px 0;
     }
 
     /* Footer (branded) */
@@ -152,8 +205,8 @@
   </p>
 
   <p>
-    Reliable software for community safety, emergency response,
-    and disaster coordination, designed for real-world conditions.
+    Reliable software for real-world operations — jobsite coordination,
+    safety, and emergency response — designed to work under pressure.
   </p>
 </header>
 
@@ -161,29 +214,62 @@
 
   <h2>About Blorp Tech</h2>
   <p>
-    Blorp Tech is a U.S.-based software company focused on strengthening
-    community resilience and emergency response through simplicity-first design.
+    Blorp Tech is a U.S.-based software company building simplicity-first tools for field environments —
+    where time is limited, conditions are imperfect, and clarity matters.
   </p>
 
   <p>
-    Our work is guided by the <strong>B.L.O.R.P. framework - Bridging Local Observations & Response Platform</strong>.
-    During emergencies, the people closest to the problem often have the most valuable information,
-    yet that information rarely reaches responders in a usable form.
+    Our work is guided by the <strong>B.L.O.R.P. framework — Bridging Local Observations & Response Platform</strong>.
+    Whether it’s a construction site or a disaster response environment, the people closest to the problem
+    often have the most valuable information — yet that information rarely reaches everyone who needs it in a usable form.
   </p>
 
   <p>
-    We build systems that bridge that gap, translating local, on-the-ground observations into clear,
-    actionable operational awareness, without burdening users with complexity or requiring ideal conditions.
+    We build systems that bridge that gap, translating on-the-ground observations into clear, actionable operational awareness,
+    without burdening users with complexity or requiring ideal conditions.
   </p>
 
   <h2>What We Build</h2>
   <p class="muted">
-    We build lightweight, operational tools that work when traditional systems fall short.
+    Lightweight, operational tools designed for real-world conditions.
   </p>
 
   <div class="product-grid">
+
+    <!-- JOBSITE LIVE (LIVE) -->
     <div class="card">
-      <span class="chip">Flagship Product</span>
+      <span class="chip chip-live">Live Platform</span>
+      <h3 style="margin-top: 0;">Jobsite Live</h3>
+
+      <p>
+        A real-time safety and coordination platform built for active construction jobsites.
+        Designed for fast adoption with minimal training.
+      </p>
+
+      <ul class="muted" style="margin: 10px 0 0; padding-left: 20px;">
+        <li>Jobsite-wide communications and updates</li>
+        <li>Geofence-based onsite/offsite awareness</li>
+        <li>Hazard reporting tied to location</li>
+        <li>Operational clarity for site leadership and crews</li>
+      </ul>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:info@blorptech.com?subject=Jobsite%20Live%20Demo%20Request" rel="noopener">
+          Request a Jobsite Live demo
+        </a>
+        <a class="btn" href="mailto:info@blorptech.com?subject=Jobsite%20Live%20Pilot%20Inquiry" rel="noopener">
+          Ask about a pilot
+        </a>
+      </div>
+
+      <p class="muted" style="margin-top: 12px;">
+        <strong>Note:</strong> If you want, we can add App Store / TestFlight links here once you confirm the exact URLs you want public.
+      </p>
+    </div>
+
+    <!-- DISASTER HELP (IN DEV) -->
+    <div class="card">
+      <span class="chip chip-dev">In Development</span>
       <h3 style="margin-top: 0;">Disaster Help</h3>
 
       <p>
@@ -204,8 +290,9 @@
       </p>
     </div>
 
+    <!-- LIT (IN DEV) -->
     <div class="card">
-      <span class="chip">New Capability</span>
+      <span class="chip chip-dev">In Development</span>
       <h3 style="margin-top: 0;">LIT (Logistics Interior Tool)</h3>
 
       <p>
@@ -222,10 +309,14 @@
         LIT is not a CAD tool. It’s built for fast operational awareness under pressure.
       </p>
     </div>
+
   </div>
+
+  <div class="divider"></div>
 
   <h2>Who We Build For</h2>
   <ul>
+    <li>Construction leadership teams, site supers, foremen, and crews</li>
     <li>Local and rural emergency managers</li>
     <li>First responders and volunteer organizations</li>
     <li>Communities affected by disasters with limited connectivity</li>
@@ -236,21 +327,21 @@
 
   <h3>Radical Simplicity</h3>
   <p>
-    Simplicity is not an aesthetic choice, it is an operational requirement.
-    In emergencies, every unnecessary button, screen, or setting creates friction.
+    Simplicity is not an aesthetic choice — it is an operational requirement.
+    In the field, every unnecessary button, screen, or setting creates friction.
     We intentionally limit scope to what matters most so tools remain usable under stress.
   </p>
 
   <h3>Real-World Reliability</h3>
   <p>
-    We build for reality and design for degraded conditions by default. Our systems are built to function
+    We design for degraded conditions by default. Our systems are built to function
     in low-bandwidth, low-power, and high-stress environments.
     Features that cannot be relied upon in real-world conditions are intentionally excluded.
   </p>
 
   <h3>Human-Centered Design</h3>
   <p>
-    We design for people, not systems. For civilians under stress,
+    We design for people, not systems — crews working in motion, civilians under stress,
     responders making rapid decisions, and volunteers coordinating with limited information.
     Our goal is technology that supports human judgment rather than competing with it.
   </p>
@@ -258,14 +349,13 @@
   <h3>Operational Clarity</h3>
   <p>
     When everything goes wrong at once, clarity becomes a lifeline.
-    Our products transform fragmented information into simple,
-    real-time understanding. The right data, in the right form, at the right moment.
+    Our products transform fragmented information into simple, real-time understanding —
+    the right data, in the right form, at the right moment.
   </p>
 
   <h2>Pilots & Demos</h2>
   <p>
-    We offer pilots and demonstrations for agencies, organizations,
-    and communities interested in evaluating Blorp Tech tools for real-world use.
+    We offer pilots and demonstrations for organizations interested in evaluating Blorp Tech tools for real-world use.
   </p>
 
   <p>
