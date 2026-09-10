@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BLORP Tech | Battlespace Logistics & Operational Rehearsal Platform</title>
+<title>BLORP Tech | Battlespace Layer for Operational Rehearsal & Planning</title>
 <meta name="description" content="BLORP Tech develops mission software for battlespace mapping, operational rehearsal, and decision support in complex environments.">
 <style>
 :root {
@@ -100,22 +100,51 @@ h1 {
   font-size: clamp(19px, 2.2vw, 25px);
   line-height: 1.5;
 }
-.acronym {
+.platform-lockup {
   margin-top: 46px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  padding: 28px 32px;
   border: 1px solid var(--line);
-  background: rgba(17,25,33,.76);
+  border-left: 4px solid var(--accent);
+  background: rgba(17,25,33,.78);
 }
-.acronym div { padding: 20px; border-right: 1px solid var(--line); }
-.acronym div:last-child { border-right: 0; }
-.acronym strong {
-  display: block;
+.platform-name {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.platform-name strong {
   color: var(--accent-2);
-  font-size: 25px;
+  font-size: clamp(30px, 4vw, 44px);
+  letter-spacing: .08em;
   line-height: 1;
 }
-.acronym span { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; }
+.platform-name span {
+  color: var(--ink);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 650;
+}
+.platform-copy {
+  max-width: 790px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+.platform-flow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 780;
+  letter-spacing: .15em;
+}
+.platform-flow i {
+  width: 36px;
+  height: 1px;
+  background: var(--accent);
+}
 section { padding: 96px 0; border-bottom: 1px solid var(--line); }
 .section-head {
   display: grid;
@@ -197,9 +226,11 @@ footer {
   .nav-links { display: none; }
   .hero { min-height: auto; }
   .hero-inner { padding: 78px 0; }
-  .acronym { grid-template-columns: 1fr; }
-  .acronym div { border-right: 0; border-bottom: 1px solid var(--line); }
-  .acronym div:last-child { border-bottom: 0; }
+  .platform-lockup { padding: 24px; }
+  .platform-name { gap: 12px; }
+  .platform-name strong, .platform-name span { display: block; width: 100%; }
+  .platform-flow { gap: 9px; letter-spacing: .1em; }
+  .platform-flow i { width: 20px; }
   .section-head, .approach { grid-template-columns: 1fr; gap: 28px; }
   .grid { grid-template-columns: 1fr; }
   section { padding: 68px 0; }
@@ -227,12 +258,17 @@ footer {
       <h1>Map the battlespace. Rehearse the mission. Execute with clarity.</h1>
       <p class="lede">BLORP Tech develops operational software that helps mission teams understand the environment, expose risk, and refine a plan before execution.</p>
 
-      <div class="acronym" aria-label="BLORP acronym">
-        <div><strong>B</strong><span>Battlespace</span></div>
-        <div><strong>L</strong><span>Logistics &amp;</span></div>
-        <div><strong>O</strong><span>Operational</span></div>
-        <div><strong>R</strong><span>Rehearsal</span></div>
-        <div><strong>P</strong><span>Platform</span></div>
+      <div class="platform-lockup">
+        <div class="platform-name">
+          <strong>BLORP</strong>
+          <span>Battlespace Layer for Operational Rehearsal &amp; Planning</span>
+        </div>
+        <p class="platform-copy">A modular mission-software layer that brings terrain, threats, routes, timing, and operational effects into one environment for planning, rehearsal, and decision support.</p>
+        <div class="platform-flow" aria-label="Platform workflow">
+          <span>MAP</span><i aria-hidden="true"></i>
+          <span>REHEARSE</span><i aria-hidden="true"></i>
+          <span>ADAPT</span>
+        </div>
       </div>
     </div>
   </div>
