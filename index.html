@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BLORP Tech | Battlespace Layer for Operational Rehearsal & Planning</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23ee9363' fill-rule='evenodd' d='M32 3C36 3 39 5 42 8L56 22C60 26 61 31 58 36L38 58C35 62 29 62 26 58L6 36C3 31 4 26 8 22L22 8C25 5 28 3 32 3ZM32 18L18 43C17 45 19 47 21 45L32 37L43 45C45 47 47 45 46 43L32 18Z'/%3E%3C/svg%3E">
 <meta name="description" content="BLORP Tech develops mission software for battlespace mapping, operational rehearsal, and decision support in complex environments.">
 <style>
 :root {
@@ -41,6 +42,18 @@ a { color: inherit; }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+}
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  flex: none;
 }
 .wordmark {
   font-weight: 850;
@@ -242,7 +255,12 @@ footer {
 <body>
 <header class="topbar">
   <div class="shell nav">
-    <a class="wordmark" href="#top">BLORP<span>TECH</span></a>
+    <a class="brand-lockup" href="#top" aria-label="BLORP Tech home">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <path fill="currentColor" fill-rule="evenodd" d="M32 3C36 3 39 5 42 8L56 22C60 26 61 31 58 36L38 58C35 62 29 62 26 58L6 36C3 31 4 26 8 22L22 8C25 5 28 3 32 3ZM32 18L18 43C17 45 19 47 21 45L32 37L43 45C45 47 47 45 46 43L32 18Z"/>
+        </svg>
+      <span class="wordmark">BLORP<span>TECH</span></span>
+    </a>
     <nav class="nav-links" aria-label="Primary navigation">
       <a href="#platform">Platform</a>
       <a href="#approach">Our Approach</a>
