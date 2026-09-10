@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BLORP Tech | Battlespace Layer for Operational Rehearsal & Planning</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23ee9363' fill-rule='evenodd' d='M32 3C36 3 39 5 42 8L56 22C60 26 61 31 58 36L38 58C35 62 29 62 26 58L6 36C3 31 4 26 8 22L22 8C25 5 28 3 32 3ZM32 18L18 43C17 45 19 47 21 45L32 37L43 45C45 47 47 45 46 43L32 18Z'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f4f6f8'/%3E%3Cg transform='translate(8 7.5) scale(.75)'%3E%3Cpath fill='%23080d12' fill-rule='evenodd' d='M32 3C36 3 39 5 42 8L56 22C60 26 61 31 58 36L38 58C35 62 29 62 26 58L6 36C3 31 4 26 8 22L22 8C25 5 28 3 32 3ZM32 18L18 43C17 45 19 47 21 45L32 37L43 45C45 47 47 45 46 43L32 18Z'/%3E%3C/g%3E%3C/svg%3E">
 <meta name="description" content="BLORP Tech develops mission software for battlespace mapping, operational rehearsal, and decision support in complex environments.">
 <style>
 :root {
@@ -50,10 +50,22 @@ a { color: inherit; }
   color: var(--ink);
   text-decoration: none;
 }
-.brand-mark {
-  width: 28px;
-  height: 28px;
+.brand-icon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
   flex: none;
+  color: #080d12;
+  background: #f4f6f8;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 8px;
+}
+.brand-mark {
+  display: block;
+  width: 23px;
+  height: 23px;
+  transform: translateY(-0.5px);
 }
 .wordmark {
   font-weight: 850;
@@ -256,9 +268,11 @@ footer {
 <header class="topbar">
   <div class="shell nav">
     <a class="brand-lockup" href="#top" aria-label="BLORP Tech home">
-      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+      <span class="brand-icon" aria-hidden="true">
+        <svg class="brand-mark" viewBox="0 0 64 64">
           <path fill="currentColor" fill-rule="evenodd" d="M32 3C36 3 39 5 42 8L56 22C60 26 61 31 58 36L38 58C35 62 29 62 26 58L6 36C3 31 4 26 8 22L22 8C25 5 28 3 32 3ZM32 18L18 43C17 45 19 47 21 45L32 37L43 45C45 47 47 45 46 43L32 18Z"/>
         </svg>
+      </span>
       <span class="wordmark">BLORP<span>TECH</span></span>
     </a>
     <nav class="nav-links" aria-label="Primary navigation">
