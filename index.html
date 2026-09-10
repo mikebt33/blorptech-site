@@ -3,285 +3,318 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Blorp Tech</title>
-
-<meta name="description" content="Blorp Tech builds simplicity-first operational software. Makers of Jobsite Live (construction coordination), Disaster Help, and LIT.">
-
+<title>BLORP Tech | Battlespace Logistics & Operational Rehearsal Platform</title>
+<meta name="description" content="BLORP Tech develops mission software for battlespace mapping, operational rehearsal, and decision support in complex environments.">
 <style>
+:root {
+  --ink: #e8edf2;
+  --muted: #a8b2bd;
+  --panel: #111921;
+  --panel-2: #16212b;
+  --line: #2a3946;
+  --accent: #d06b3b;
+  --accent-2: #ee9363;
+  --deep: #080d12;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
+  color: var(--ink);
+  background: var(--deep);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
-  color: #111;
-  background: #f5f5f5;
 }
-
-header {
-  text-align: center;
-  padding: 60px 20px;
-  background: #f0f0f0;
+a { color: inherit; }
+.shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(8,13,18,.92);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  backdrop-filter: blur(12px);
 }
-
-h1 { font-size: 32px; margin: 0 0 8px; }
-h2 { margin-top: 48px; font-size: 22px; }
-h3 { margin-top: 28px; font-size: 19px; }
-
-main {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 36px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-p, li { font-size: 17px; }
-
-a { color: #0366d6; text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-.product-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  margin-top: 18px;
-}
-
-@media (min-width: 820px) {
-  .product-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.card {
-  border: 1px solid #eee;
-  border-radius: 14px;
-  padding: 24px;
-  background: #fafafa;
-}
-
-.chip {
-  display: inline-block;
-  font-size: 12px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  margin-bottom: 10px;
-}
-
-.chip-live {
-  background: #ecfdf3;
-  color: #065f46;
-  border: 1px solid #bfe7cf;
-}
-
-.chip-dev {
-  background: #fff7ed;
-  color: #7c2d12;
-  border: 1px solid #fed7aa;
-}
-
-.btn-row {
-  margin-top: 18px;
+.nav {
+  min-height: 70px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
-
-.btn {
-  padding: 12px 16px;
-  border-radius: 10px;
-  font-weight: 600;
-  border: 1px solid #111;
+.wordmark {
+  font-weight: 850;
+  letter-spacing: .16em;
   text-decoration: none;
 }
-
-.btn-primary {
-  background: #111;
-  color: #fff;
-}
-
-.btn-secondary {
-  background: #fff;
-  color: #111;
-}
-
-.qr-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  margin-top: 28px;
-  text-align: center;
-}
-
-@media (min-width: 700px) {
-  .qr-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.qr-grid img {
-  max-width: 220px;
-  border-radius: 12px;
-}
-
-.muted {
-  color: #555;
-  font-size: 15px;
-}
-
-.site-footer {
-  text-align: center;
-  color: #666;
+.wordmark span { color: var(--accent-2); }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a {
+  color: var(--muted);
   font-size: 14px;
-  margin: 48px 0 32px;
+  font-weight: 650;
+  text-decoration: none;
+}
+.nav-links a:hover { color: var(--ink); }
+.hero {
+  min-height: 670px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(208,107,59,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(208,107,59,.08) 1px, transparent 1px),
+    radial-gradient(circle at 78% 30%, rgba(208,107,59,.18), transparent 33%);
+  background-size: 64px 64px, 64px 64px, auto;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+.hero-inner {
+  position: relative;
+  padding: 90px 0 100px;
+  max-width: 900px;
+}
+.eyebrow {
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: .19em;
+  font-weight: 750;
+  font-size: 13px;
+}
+h1 {
+  max-width: 880px;
+  margin: 16px 0 24px;
+  font-size: clamp(48px, 8vw, 92px);
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+.lede {
+  max-width: 730px;
+  color: var(--muted);
+  font-size: clamp(19px, 2.2vw, 25px);
+  line-height: 1.5;
+}
+.acronym {
+  margin-top: 46px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 1px solid var(--line);
+  background: rgba(17,25,33,.76);
+}
+.acronym div { padding: 20px; border-right: 1px solid var(--line); }
+.acronym div:last-child { border-right: 0; }
+.acronym strong {
+  display: block;
+  color: var(--accent-2);
+  font-size: 25px;
+  line-height: 1;
+}
+.acronym span { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; }
+section { padding: 96px 0; border-bottom: 1px solid var(--line); }
+.section-head {
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 46px;
+}
+.kicker {
+  margin: 0;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: 13px;
+}
+h2 {
+  margin: 0;
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+}
+.section-copy { margin: 0; color: var(--muted); font-size: 19px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.card {
+  min-height: 280px;
+  padding: 30px;
+  background: linear-gradient(145deg, var(--panel-2), var(--panel));
+  border: 1px solid var(--line);
+}
+.card-num { color: var(--accent-2); font-size: 13px; letter-spacing: .12em; }
+.card h3 { margin: 44px 0 12px; font-size: 23px; }
+.card p { margin: 0; color: var(--muted); }
+.approach {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 56px;
+}
+.principles { display: grid; gap: 14px; }
+.principle {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 18px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+.principle strong { color: var(--accent-2); }
+.principle h3 { margin: 0 0 7px; font-size: 19px; }
+.principle p { margin: 0; color: var(--muted); }
+.statement {
+  padding: 34px;
+  background: var(--accent);
+  color: #0b1015;
+}
+.statement p { margin: 0; font-size: 26px; font-weight: 760; line-height: 1.35; }
+.contact {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+}
+.contact p { max-width: 660px; color: var(--muted); font-size: 18px; }
+.button {
+  display: inline-block;
+  padding: 14px 20px;
+  border: 1px solid var(--accent-2);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 750;
+}
+.button:hover { background: var(--accent); border-color: var(--accent); color: #0b1015; }
+footer {
+  padding: 34px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.footer-row { display: flex; justify-content: space-between; gap: 24px; }
+.footer-row a { color: var(--muted); }
+@media (max-width: 760px) {
+  .nav-links { display: none; }
+  .hero { min-height: auto; }
+  .hero-inner { padding: 78px 0; }
+  .acronym { grid-template-columns: 1fr; }
+  .acronym div { border-right: 0; border-bottom: 1px solid var(--line); }
+  .acronym div:last-child { border-bottom: 0; }
+  .section-head, .approach { grid-template-columns: 1fr; gap: 28px; }
+  .grid { grid-template-columns: 1fr; }
+  section { padding: 68px 0; }
+  .contact { align-items: start; flex-direction: column; }
+  .footer-row { flex-direction: column; }
 }
 </style>
 </head>
-
 <body>
-
-<header>
-  <h1>Blorp Tech</h1>
-  <p style="font-size:20px; margin:8px 0;">
-    <strong>Making complexity simple.</strong>
-  </p>
-  <p>
-    Reliable operational software for construction, emergency response,
-    and real-world coordination under pressure.
-  </p>
+<header class="topbar">
+  <div class="shell nav">
+    <a class="wordmark" href="#top">BLORP<span>TECH</span></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#platform">Platform</a>
+      <a href="#approach">Our Approach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<main>
+<main id="top">
+  <div class="hero">
+    <div class="shell hero-inner">
+      <p class="eyebrow">Mission software for complex environments</p>
+      <h1>Map the battlespace. Rehearse the mission. Execute with clarity.</h1>
+      <p class="lede">BLORP Tech develops operational software that helps mission teams understand the environment, expose risk, and refine a plan before execution.</p>
 
-<h2>About Blorp Tech</h2>
-<p>
-Blorp Tech builds simplicity-first tools for field environments —
-where clarity, speed, and reliability matter more than feature overload.
-</p>
-
-<p>
-Guided by the <strong>B.L.O.R.P. framework — Bridging Local Observations & Response Platform</strong>,
-our mission is to transform on-the-ground observations into clear,
-actionable operational awareness.
-</p>
-
-<h2>What We Build</h2>
-
-<div class="product-grid">
-
-  <!-- JOBSITE LIVE -->
-  <div class="card">
-    <span class="chip chip-live">Live Platform</span>
-    <h3>Jobsite Live</h3>
-
-    <p>
-      A real-time safety and coordination platform for active construction jobsites.
-      Designed for immediate adoption with minimal training.
-    </p>
-
-    <ul class="muted">
-      <li>Site-wide updates and communication</li>
-      <li>Geofence-based onsite awareness</li>
-      <li>Location-based hazard reporting</li>
-      <li>Operational clarity for leadership and crews</li>
-    </ul>
-
-    <div class="btn-row">
-      <a class="btn btn-primary"
-         href="https://apps.apple.com/us/app/jobsite-live/id6759117669"
-         target="_blank" rel="noopener">
-        Download on iOS App Store
-      </a>
-
-      <a class="btn btn-secondary"
-         href="mailto:info@blorptech.com?subject=Jobsite%20Live%20Demo%20Request">
-        Request a Demo
-      </a>
+      <div class="acronym" aria-label="BLORP acronym">
+        <div><strong>B</strong><span>Battlespace</span></div>
+        <div><strong>L</strong><span>Logistics &amp;</span></div>
+        <div><strong>O</strong><span>Operational</span></div>
+        <div><strong>R</strong><span>Rehearsal</span></div>
+        <div><strong>P</strong><span>Platform</span></div>
+      </div>
     </div>
+  </div>
 
-    <div class="qr-grid">
+  <section id="platform">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="kicker">The platform</p>
+          <h2>One operational picture from planning through rehearsal.</h2>
+        </div>
+        <p class="section-copy">BLORP brings terrain, threats, routes, timing, and mission effects into a time-enabled environment where teams can inspect the plan, identify vulnerabilities, and compare adjustments.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <span class="card-num">01 / MAP</span>
+          <h3>Battlespace Mapping</h3>
+          <p>Visualize terrain, threat systems, friendly routes, and mission geometry in a shared operational context.</p>
+        </article>
+        <article class="card">
+          <span class="card-num">02 / REHEARSE</span>
+          <h3>Mission Rehearsal</h3>
+          <p>Play, pause, and scrub the mission timeline to understand how movement, timing, and effects interact.</p>
+        </article>
+        <article class="card">
+          <span class="card-num">03 / ADAPT</span>
+          <h3>Decision Support</h3>
+          <p>Surface modeled conflicts and test changes to route, timing, speed, altitude, and synchronization before execution.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="shell approach">
       <div>
-        <p><strong>Scan for iOS</strong></p>
-        <img src="/ios-qr.png" alt="iOS Download QR">
+        <p class="kicker">Our Approach</p>
+        <h2>Built around the mission, not the software.</h2>
+        <p class="section-copy" style="margin-top:24px;">We start with the operational problem, put working concepts in front of users early, and evolve capability through direct mission feedback.</p>
       </div>
 
       <div>
-        <p><strong>Scan for Android</strong></p>
-        <img src="/android-qr.png" alt="Android Download QR">
+        <div class="principles">
+          <div class="principle">
+            <strong>01</strong>
+            <div><h3>User-led</h3><p>Designed with the people who plan, rehearse, and execute the mission.</p></div>
+          </div>
+          <div class="principle">
+            <strong>02</strong>
+            <div><h3>Integration-minded</h3><p>Structured to connect with existing mission data, tools, and operational workflows.</p></div>
+          </div>
+          <div class="principle">
+            <strong>03</strong>
+            <div><h3>Truthful by design</h3><p>Clear separation between modeled decision support and authoritative operational systems.</p></div>
+          </div>
+        </div>
+        <div class="statement">
+          <p>See the full mission before the mission sees you.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <p class="muted" style="margin-top:18px;">
-      Android is currently distributed for pilot environments.
-      Contact us if your organization requires deployment assistance.
-    </p>
-  </div>
-
-  <!-- DISASTER HELP -->
-  <div class="card">
-    <span class="chip chip-dev">In Development</span>
-    <h3>Disaster Help</h3>
-
-    <p>
-      A lightweight, real-time coordination platform enabling communities
-      to share critical information during disasters while supporting responder awareness.
-    </p>
-
-    <p class="muted">
-      Designed to bridge civilian reporting with structured operational systems,
-      including TAK-compatible environments.
-    </p>
-  </div>
-
-  <!-- LIT -->
-  <div class="card">
-    <span class="chip chip-dev">In Development</span>
-    <h3>LIT (Logistics Interior Tool)</h3>
-
-    <p>
-      Rapid interior mapping and space availability reporting
-      for surge medical facilities, shelters, and temporary operations.
-    </p>
-
-    <p class="muted">
-      Built for fast operational awareness — not CAD precision.
-    </p>
-  </div>
-
-</div>
-
-<h2>Who We Build For</h2>
-<ul>
-  <li>Construction leadership and jobsite crews</li>
-  <li>Emergency managers and first responders</li>
-  <li>Organizations operating in degraded conditions</li>
-  <li>Communities requiring simple coordination tools</li>
-</ul>
-
-<h2>Pilots & Demos</h2>
-<p>
-We offer pilot deployments and demonstrations for organizations evaluating Blorp Tech tools.
-</p>
-
-<p>
-<strong>Email:</strong>
-<a href="mailto:info@blorptech.com">info@blorptech.com</a>
-</p>
-
-<h2>Legal</h2>
-<p>
-<a href="/privacy.html">Privacy Policy</a>
-</p>
-
+  <section id="contact">
+    <div class="shell contact">
+      <div>
+        <p class="kicker">Contact</p>
+        <h2>Bring us the hard operational problem.</h2>
+        <p>BLORP Tech works at the intersection of battlespace awareness, mission rehearsal, and operator-centered software.</p>
+      </div>
+      <a class="button" href="mailto:info@blorptech.com?subject=BLORP%20Tech%20Inquiry">Start a conversation</a>
+    </div>
+  </section>
 </main>
 
-<footer class="site-footer">
-© <span id="year"></span> Blorp Tech — All Rights Reserved
+<footer>
+  <div class="shell footer-row">
+    <span>© <span id="year"></span> BLORP Tech. All rights reserved.</span>
+    <a href="/privacy.html">Privacy Policy</a>
+  </div>
 </footer>
-
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
